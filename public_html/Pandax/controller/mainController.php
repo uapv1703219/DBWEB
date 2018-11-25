@@ -17,6 +17,16 @@ class mainController
 		}
 	}
 
+	public static function Friend($request,$conyext)
+	{
+		if(isset($_SESSION['pseudo']))
+		{
+			$context->mavariable="Friend SUCCESS";
+			return context::SUCCESS;
+		}
+	return context::ERROR;
+	}
+
 	public static function helloWorld($request,$context)
 	{
 		if(isset($_SESSION['pseudo']))

@@ -9,9 +9,8 @@
 
 <div id="friendlist" class="jumbotron list-content">
 	<ul class="list-group">
-		<a href="Pandax.php?action=Friend">
 	  <li class="list-group-item text-left">
-	  	<img src="https://secure.gravatar.com/avatar/1e97891f502fdd864e8872445995498e?s=100&amp;r=g&amp;d=mm" class="img-rounded user-avatar-sm"></a>
+	  	<img src="https://secure.gravatar.com/avatar/1e97891f502fdd864e8872445995498e?s=100&amp;r=g&amp;d=mm" class="img-rounded user-avatar-sm">
 	    <label class="name">
 	        Friend 1<br>
 	    </label>
