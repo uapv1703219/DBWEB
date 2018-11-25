@@ -21,7 +21,6 @@ class mainController
 	{
 		if(isset($_SESSION['pseudo']))
 		{
-			$context->mavariable="Friend SUCCESS";
 			return context::SUCCESS;
 		}
 	return context::ERROR;
@@ -53,10 +52,13 @@ class mainController
 	{
 		if(isset($_POST['pseudo']))
 		{
-			if(
-				utilisateurTable::getUserByLoginAndPass($_POST['pseudo'],$_POST['password']))
+			$CURSESSION=utilisateurTable::getUserByLoginAndPass($_POST['pseudo'],$_POST['password']);
+			if($CURSESSION)
 				{
 					$_SESSION['pseudo'] = $_POST['pseudo'];
+					/*foreach($CURSESSION as $CUR) {
+					$_SESSION['pseudo'] = $CUR->pseudo;
+					}*/
 					return context::SUCCESS;
 				}
 				else

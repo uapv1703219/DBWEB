@@ -10,14 +10,14 @@ class utilisateurTable
 
     if($res === false)
       return false ;
-    
-
     return $res ;
   }
+
+
   public static function getUserById($id)
   {
       $connection = new dbconnection() ;
-      $sql = "select identifiant, nom, prenom from fredouil.utilisateur where identifiant = '".$id."'";
+      $sql = "select identifiant, nom, prenom from fredouil.utilisateur where id = '".$id."'";
       $res = $connection->doQueryObject( $sql,"utilisateur");
       return $res;
   }

@@ -6,33 +6,28 @@
 	</h3>
 </div>
 
-
 <div id="friendlist" class="jumbotron list-content">
 	<ul class="list-group">
-		<a href="Pandax.php?action=Friend">
-	  <li class="list-group-item text-left">
-	  	<img src="https://secure.gravatar.com/avatar/1e97891f502fdd864e8872445995498e?s=100&amp;r=g&amp;d=mm" class="img-rounded user-avatar-sm"></a>
-	    <label class="name">
-	        Friend 1<br>
-	    </label>
 
-	    <div class="break"></div>
-	  </li>
-	  <li href="Pandax.php?action=FriendSuccess" class="list-group-item text-left">
-	   	<img src="https://secure.gravatar.com/avatar/1e97891f502fdd864e8872445995498e?s=100&amp;r=g&amp;d=mm" class="img-rounded user-avatar-sm">
-	    <label class="name">
-	      Friend 2 
+<?php $results = utilisateurTable::getUsers();
+
+foreach($results as $result) :
+   $user =  $result['identifiant'];          
+   $name = $result['nom'];
+   $prenom = $result['prenom'];  ?>
+
+   	<a href='Pandax.php?action=Friend' onclick="getUser(<?php echo $user ?>)">
+	  <li class='list-group-item text-left'>
+	  	<img src='https://secure.gravatar.com/avatar/1e97891f502fdd864e8872445995498e?s=100&amp;r=g&amp;d=mm' class='img-rounded user-avatar-sm'></a>
+	  	<label class='name'>
+	    	<?= htmlspecialchars($prenom) ?>
 	    </label>
-	    <div class="break"></div>
-	  </li>
-	  <li href="Pandax.php?action=FriendSuccess" class="list-group-item text-left">
-	      <img src="https://secure.gravatar.com/avatar/1e97891f502fdd864e8872445995498e?s=100&amp;r=g&amp;d=mm" class="img-rounded user-avatar-sm">
-	      <label class="name">
-	        Friend 3
-	      </label>
-	    <div class="break"></div>
-	  </li>
-	   <form class='form-signin' method='post' action='Pandax.php?action=loggedLoadMore'>
-		<button class='btn btn-lg btn-primary btn-block' type='submit'>Load more</button></form>
+	    
+	    <label class='name'>
+	    	<?= htmlspecialchars($name) ?>
+	    </label>
+	    
+<?php endforeach ?>
+
 	</ul>
 </div>

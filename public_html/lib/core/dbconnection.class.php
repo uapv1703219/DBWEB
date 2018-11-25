@@ -46,7 +46,7 @@ class dbconnection
   {
 	$prepared = $this->link->prepare($sql);
     $prepared->execute();
-    $res = $prepared->fetchAll(PDO::FETCH_CLASS, $className);
+    $res = $prepared->fetchALL(PDO::FETCH_CLASS, $className);
     return $res;
   }
 
