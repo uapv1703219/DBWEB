@@ -1,0 +1,44 @@
+#chatBox1 {
+	z-index: 		9;
+	position:		absolute;
+	width: 			450px;
+	padding:		0;
+	    border-style: solid;
+	height: 		auto;
+	background-color: rgb(76, 76, 76);
+}
+#chatBoxHeader {
+    cursor: 		move;
+}
+#messageBox {
+	/*position:		absolute;*/
+	z-index: 		10;
+	bottom:			0px; 
+	left:			0px;
+	
+}
+#insideBox{
+
+}
+#mess{
+	background-color: darkslategrey;
+}
+.msg-right{
+    background:#3BA1EE;
+    padding:10px;
+    text-align:right;
+    color:#fff;
+    margin:5px;
+    width: #chatBox1.width * 0.7;
+    float:right;
+  margin-right: 10px;
+}
+.msg-left{
+	size: auto;
+    background:#ddd;
+    padding:10px;
+    margin:5px;
+     width: #chatBox1.width * 0.7;
+    float:left;
+  margin-left: 10px;
+}

@@ -1,10 +1,17 @@
-body {
-}
 
 #friendlist {
 	padding: 0;
+	max-height: calc(100vh - 200px);
+    overflow-y: auto;
 }
 
 #website {
 	padding: 0;
+}
+
+#backgroundProfile {
+	padding: 0;}
+
+body {
+ 	text-decoration: none;
 }

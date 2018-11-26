@@ -4,9 +4,16 @@ abstract class basemodel
 {
   private $data = array();
 
-  public function construct($dat)
+  public function __construct($row = NULL)
   {
-    $data=$dat;
+    $this->data = array();
+    if(!empty($row) && is_array($row)) 
+    {
+      foreach($row as $att => $value) 
+      {
+        $this->data[$att] = $value;
+      }
+    }
   }
 //-------------------------------------TP2---------------------------------
   public function __set($key,$var)
@@ -16,7 +23,7 @@ abstract class basemodel
 
   public function __get($key)
   {
-    if(array_key_exists($key,$data)){return $this->data[$key];}
+    if(array_key_exists($key,$this->data)){return $this->data[$key];}
   }
 
   //-------------------------------------------------------------------------

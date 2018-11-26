@@ -16,7 +16,7 @@ class messageTable
 		$msg= $connection->doQueryObject( $sql,"message");
 		return $msg;
 	}
-		public function getMessageSentTo($id,$debut,$fin)
+		public function getMessagesSentTo($id,$debut,$fin)
 	{
 		$connection = new dbconnection() ;
 		$sql = "select  filtreMessages(".$debut.",".$fin.",".$id.")";

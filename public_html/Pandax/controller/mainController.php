@@ -56,6 +56,8 @@ class mainController
 			if($CURSESSION)
 				{
 					$_SESSION['pseudo'] = $_POST['pseudo'];
+					 $context->setSessionAttribute('logged', 1);
+					 $context->setSessionAttribute('id', $CURSESSION[0]['id']);
 					/*foreach($CURSESSION as $CUR) {
 					$_SESSION['pseudo'] = $CUR->pseudo;
 					}*/

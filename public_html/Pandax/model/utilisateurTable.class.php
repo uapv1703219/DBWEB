@@ -6,7 +6,7 @@ class utilisateurTable
   {
     $connection = new dbconnection() ;
     $sql = "select * from fredouil.utilisateur where identifiant='".$login."' and pass='".sha1($pass)."'" ;
-    $res = $connection->doQueryObject( $sql,"utilisateur" );
+    $res = $connection->doQuery( $sql );
 
     if($res === false)
       return false ;

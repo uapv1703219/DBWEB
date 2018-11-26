@@ -44,10 +44,11 @@ class dbconnection
 
  public function doQueryObject( $sql, $className )
   {
-	$prepared = $this->link->prepare($sql);
+    $prepared = $this->link->prepare($sql);
     $prepared->execute();
-    $res = $prepared->fetchALL(PDO::FETCH_CLASS, $className);
+    $res = $prepared->fetchAll(PDO::FETCH_CLASS, $className);
     return $res;
+
   }
 
   public function __destruct()

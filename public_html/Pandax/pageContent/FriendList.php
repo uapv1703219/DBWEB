@@ -16,7 +16,7 @@ foreach($results as $result) :
    $name = $result['nom'];
    $prenom = $result['prenom'];  ?>
 
-   	<a href='Pandax.php?action=Friend' onclick="getUser(<?php echo $user ?>)">
+   	<a href='Pandax.php?action=Friend' onclick="getUser($user)">
 	  <li class='list-group-item text-left'>
 	  	<img src='https://secure.gravatar.com/avatar/1e97891f502fdd864e8872445995498e?s=100&amp;r=g&amp;d=mm' class='img-rounded user-avatar-sm'></a>
 	  	<label class='name'>
@@ -28,6 +28,6 @@ foreach($results as $result) :
 	    </label>
 	    
 <?php endforeach ?>
-
+	</li>
 	</ul>
 </div>
